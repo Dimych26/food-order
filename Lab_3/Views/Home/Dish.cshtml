@@ -1,0 +1,150 @@
+﻿@*@model Lab_3.Models.DishModel
+
+    @{
+        ViewBag.Title = "Dish";
+    }
+
+    <h2>Dish</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>DishModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.ComplexDishId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ComplexDishId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ComplexDishId, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+@*<div class="form-group">
+
+    <form name="form" id="we">
+        <!--><label for="id">Id пол</label>-->
+        <!-- <input type="number" class="form-control" id="id" placeholder="Id пол" name="id">-->
+        <label for="Name">Name </label>
+        <input type="text" class="form-control" id="name" placeholder="name" name="name">
+        <label for="Price">Price </label>
+        <input type="text" number="form-control" id="price" placeholder="price " name="price">
+    </form>
+    </div>
+
+    <button type="submit" class="btn btn-default" onclick="MakeStattyi()">Submit</button>
+    </div>
+
+    }
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="/Scripts/respond.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        function MakeStattyi() {
+            var DishModel = {
+                // Id: $(id).val(),
+                //TypeUser: $('#qw').val(),
+                //Name: $('#name').val(),
+                //Rubryka_name: $('#rubryka_name').val(),
+                //Stattya: $('#stattya').val()
+                Name: $('#name').val(),
+                Price: $('#price').val(),
+
+
+            }
+            alert(JSON.stringify(DishModel));
+
+            $.ajax({
+                url: '/api/Dish/',
+                type: 'POST',
+                dataType: 'JSON',
+                data: JSON.stringify(DishModel),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    alert("Добавлено")
+                },
+                error: function (error) {
+                    alert(error.responseText);
+                }
+            });
+        }
+    </script>
+    @*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    <!--}*@*
+<div class="container col-lg-push-4">
+    <h2>Добавить пользователя:</h2>
+    <div class="form-group">
+        <form name="form" id="we">
+
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" id="Name" placeholder="Name" name="Name">
+            <label for="type">Price </label>
+            <input type="number" class="form-control" id="Price" placeholder="Price " name="Price">
+            <label for="type">Type </label>
+            <input type="text" class="form-control" id="Type" placeholder="0-2 " name="Type">
+        </form>
+    </div>
+    <button type="submit" class="btn btn-default" onclick="MakeUser()">Submit</button>
+    <button type="submit" class="btn btn-default" onclick="MakeUser()">Submit</button>
+</div>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="/Scripts/respond.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function MakeUser() {
+            var DishModel = {
+                // Id: $(id).val(),
+                //TypeUser: $('#qw').val(),
+                //Name: $('#name').val(),
+                //Rubryka_name: $('#rubryka_name').val(),
+                //Stattya: $('#stattya').val()
+                Name: $('#Name').val(),
+                Price: $('#Price').val(),
+                Type: $('#Type').val(),
+
+
+            }
+            alert(JSON.stringify(DishModel));
+
+            $.ajax({
+                url: '/api/Dish/',
+                type: 'POST',
+                dataType: 'JSON',
+                data: JSON.stringify(DishModel),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    alert("Добавлено")
+                },
+                error: function (error) {
+                    alert(error.responseText);
+                }
+            });
+        }
+    </script>

@@ -1,0 +1,17 @@
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\DAL.dll.config
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\DAL.dll
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\DAL.pdb
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\AutoMapper.dll
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\EntityFramework.dll
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\Ninject.dll
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\AutoMapper.pdb
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\AutoMapper.xml
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\EntityFramework.xml
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\bin\Debug\Ninject.xml
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\obj\Debug\DAL.dll
+D:\2 курс\2 семестр\Архітектура ПЗ\Модуль 2\Lab_3\DAL\obj\Debug\DAL.pdb

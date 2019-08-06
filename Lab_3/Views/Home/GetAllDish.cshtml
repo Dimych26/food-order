@@ -1,0 +1,62 @@
+﻿@model IEnumerable<BLL.ModelDTO.DishDTO>
+
+@{
+    ViewBag.Title = "GetAllDish";
+
+}
+
+<h2>GetAllDish</h2>
+@*@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.ListBox("List", ViewBag.List as List<SelectListItem>)//new List<SelectListItem>(ViewBag.List)) //SelectList(ViewBag.List) )
+    <p><input type="submit" value="Отправить" /></p>
+   // @Html.DropDownListFor(x => x.GetEnumerator(), Model.Select);
+}*@
+p>
+    @Html.ActionLink("Create New", "api/Dish")
+</p>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{ <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComplexDishId)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>
+                   
+                     
+                        @Html.DisplayFor(modelItem => item.Name)
+                    
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+
+            </tr>
+
+        }
+
+
+    </table>
+
+<p><input type="submit" value="Отправить" /></p>
+}
